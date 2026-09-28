@@ -11,21 +11,15 @@ services:
     ports:
       - "3306:3306"
 
-    volumes:
-      - mysql_data:/var/lib/mysql
-
-
   product-service:
     build: .
     image: product-service:1.0
     container_name: product-service
 
     ports:
-      - "8082:8085"
+      - "8085:8085"
 
     depends_on:
       - mysql
 
 
-volumes:
-  mysql_data:
