@@ -17,7 +17,7 @@ services:
     container_name: product-service
 
     ports:
-      - "8085:8085"
+      - "8083:8083"
 
     depends_on:
       - mysql
